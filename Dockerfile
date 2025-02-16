@@ -1,8 +1,4 @@
 FROM debian:stable-slim
-
-# COPY source destination
-COPY goserver /bin/goserver
-
-ENV PORT=8080
-
-CMD ["/bin/goserver"]
+COPY main.py main.py
+COPY books/ books/
+CMD ["python3", "main.py"]
